@@ -1,20 +1,30 @@
 {
   "name": "electron-vite-project",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "author": "Your Name",
+  "description": "Your App Description",
+  "main": "dist-electron/main.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build && electron-builder",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "package": "electron-builder build --win"
   },
   "dependencies": {
+    "@electron/remote": "^2.1.2",
+    "@mapbox/mapbox-gl-directions": "^4.3.1",
     "framer-motion": "^11.11.17",
     "lucide-react": "^0.460.0",
+    "mapbox-gl": "^3.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "recharts": "^2.13.3"
+    "react-map-gl": "^7.1.7",
+    "react-router-dom": "^6.28.0",
+    "recharts": "^2.13.3",
+    "socket.io-client": "^4.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.64",
@@ -24,7 +34,7 @@
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.20",
     "electron": "^30.0.1",
-    "electron-builder": "^24.13.3",
+    "electron-builder": "^23.6.0",
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
@@ -33,7 +43,23 @@
     "typescript": "^5.2.2",
     "vite": "^5.1.6",
     "vite-plugin-electron": "^0.28.6",
-    "vite-plugin-electron-renderer": "^0.14.5"
+    "vite-plugin-electron-renderer": "^0.14.6"
   },
-  "main": "dist-electron/main.js"
+  "build": {
+    "appId": "com.electron.app",
+    "productName": "Electron App",
+    "directories": {
+      "output": "release/${version}"
+    },
+    "files": [
+      "dist/**/*",
+      "dist-electron/**/*"
+    ],
+    "win": {
+      "target": "zip",
+      "icon": "public/icon.ico"
+    },
+    "asar": false,
+    "compression": "maximum"
+  }
 }

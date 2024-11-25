@@ -28,11 +28,9 @@ a:hover {
 
 body {
   margin: 0;
-  /* display: flex; */
-  /* place-items: center; */
-  /* min-width: 320px; */
-  min-height: 100vh;
+  min-height: 720px; /* min-height를 720px로 변경 */
   width: 100%;
+  overflow: hidden;
 }
 
 h1 {
@@ -70,4 +68,20 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.drag-area {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+[data-drag="true"] {
+  -webkit-app-region: drag;
+}
+
+[data-drag="false"] {
+  -webkit-app-region: no-drag;
 }

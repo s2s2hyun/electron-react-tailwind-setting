@@ -12,11 +12,21 @@ process.env.VITE_PUBLIC = VITE_DEV_SERVER_URL ? path.join(process.env.APP_ROOT, 
 let win;
 function createWindow() {
   win = new BrowserWindow({
-    // 최소화 기능 상단 버튼 X
-    frame: true,
+    width: 800,
+    // 원하는 너비
+    height: 600,
+    // 원하는 높이
+    frame: false,
+    // 프레임 제거
+    titleBarStyle: "hidden",
+    // 타이틀 바 숨기기
+    transparent: true,
+    // 배경 투명하게 (선택사항)
     icon: path.join(process.env.VITE_PUBLIC, "electron-vite.svg"),
     webPreferences: {
-      preload: path.join(__dirname, "preload.mjs")
+      preload: path.join(__dirname, "preload.mjs"),
+      nodeIntegration: true,
+      contextIsolation: false
     }
   });
   win.webContents.on("did-finish-load", () => {
