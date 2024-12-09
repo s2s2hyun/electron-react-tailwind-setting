@@ -4,9 +4,15 @@ declare module "@mapbox/mapbox-gl-directions" {
   export interface DirectionsOptions {
     accessToken: string;
     unit?: "metric" | "imperial";
-    profile?: string;
+    profile?: "mapbox/driving" | "mapbox/walking" | "mapbox/cycling";
+    language?: string;
     alternatives?: boolean;
     congestion?: boolean;
+    controls?: {
+      inputs?: boolean;
+      instructions?: boolean;
+      profileSwitcher?: boolean;
+    };
   }
 
   export default class MapboxDirections implements IControl {
@@ -25,10 +31,5 @@ declare module "@mapbox/mapbox-gl-directions" {
 }
 
 declare module "@mapbox/mapbox-gl-directions/dist/mapbox-gl-directions" {
-  import { IControl } from "mapbox-gl";
-  export default class MapboxDirections implements IControl {
-    constructor(options?: any);
-    onAdd(map: any): HTMLElement;
-    onRemove(): void;
-  }
+  export * from "@mapbox/mapbox-gl-directions";
 }

@@ -2,10 +2,13 @@ import { useEffect, useState } from "react";
 
 import { io } from "socket.io-client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Three from "./components/Page/Three/Three";
+import useSocket from "./hooks/useSocket";
+import MapIndex from "./components/Page/Map/MapIndex";
 import Main from "./components/Page/Main/Main";
-import Two from "./components/Page/Two/Two";
 
 const App = () => {
+  // const { speed  } = useSocket("http://localhost:3400");
   // const [windowSize, setWindowSize] = useState({
   //   width: window.innerWidth,
   //   height: window.innerHeight,
@@ -68,7 +71,8 @@ const App = () => {
       <Routes>
         {/* path="/" 경로에서 Home 컴포넌트 렌더링 */}
         <Route path="/" element={<Main />} />
-        <Route path="/two" element={<Two />} />
+        <Route path="/two" element={<MapIndex />} />
+        {/* <Route path="/three" element={<Three speed={speed} />} /> */}
       </Routes>
     </Router>
   );

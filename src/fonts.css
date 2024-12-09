@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Hyundai Sans";
+  src: url("/fonts/HyundaiSansHeadOffice-Light.woff2") format("woff2"),
+    url("/fonts/HyundaiSansHeadOffice-Light.woff") format("woff");
+  font-weight: 500;
+  font-style: light;
+  font-display: swap;
+}

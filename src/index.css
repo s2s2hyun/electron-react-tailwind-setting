@@ -2,8 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Hyundai-Sans-Regular";
+  src: url("/fonts/HyundaiSansHeadOffice-Regular.woff2") format("woff2"),
+    url("/fonts/HyundaiSansHeadOffice-Regular.woff") format("woff");
+  font-weight: 500;
+  font-style: light;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Hyundai Sans";
+  src: url("/fonts/HyundaiSansHeadOffice-Light.woff2") format("woff2"),
+    url("/fonts/HyundaiSansHeadOffice-Light.woff") format("woff");
+  font-weight: 500;
+  font-style: light;
+  font-display: swap;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Hyundai-Sans-Regular", Inter, system-ui, Avenir, Helvetica,
+    Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 

@@ -69,7 +69,7 @@ const Main = () => {
 
   return (
     <div
-      className="min-h-screen flex justify-center items-center px-4 py-10 bg-zinc-900/30 backdrop-blur"
+      className="flex items-center justify-center min-h-screen px-4 py-10 bg-zinc-900/30 backdrop-blur"
       style={{
         backgroundImage: "url(https://i.redd.it/78xwcik9uwla1.png)",
         backgroundPosition: "bottom",
@@ -79,7 +79,7 @@ const Main = () => {
       {/* <Header /> */}
 
       <div
-        className="fixed top-4 right-4 bg-black/70 text-white px-4 py-2 rounded-lg z-50 font-mono"
+        className="fixed z-50 px-4 py-2 font-mono text-white rounded-lg top-4 right-4 bg-black/70"
         style={{ zIndex: 1000 }}
       >
         {windowSize.width} x {windowSize.height}px
@@ -95,7 +95,7 @@ const Main = () => {
             <img
               src={image}
               alt={`Gallery image ${index + 1}`}
-              className="h-full w-full object-cover rounded-3xl shadow-xl"
+              className="object-cover w-full h-full shadow-xl rounded-3xl"
             />
           </motion.li>
         ))}

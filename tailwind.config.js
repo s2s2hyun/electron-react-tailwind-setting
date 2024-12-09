@@ -10,5 +10,16 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addUtilities }) {
+      addUtilities({
+        '.drag': {
+          '-webkit-app-region': 'drag'
+        },
+        '.no-drag': {
+          '-webkit-app-region': 'no-drag'
+        }
+      })
+    }
+  ],
 };

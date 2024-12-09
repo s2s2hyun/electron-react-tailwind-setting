@@ -1,0 +1,108 @@
+#root {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.mapboxgl-ctrl-directions {
+  width: 33%;
+  min-width: 300px;
+}
+
+/* #map-container {
+
+} */
+#map-container {
+  overflow: visible; /* 마커가 잘리지 않도록 설정 */
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-canvas {
+  position: absolute;
+  z-index: 1;
+}
+
+/* 방향 검색 컨트롤의 스타일 */
+.mapboxgl-ctrl-top-left {
+  display: block !important;
+}
+
+.mapboxgl-marker {
+  z-index: 1000 !important;
+}
+
+.current-location-marker {
+  z-index: 9999; /* 항상 최상위 레이어 */
+  position: absolute; /* 위치 고정 */
+}
+
+.direction-arrow {
+  z-index: 9999; /* 항상 최상위 레이어 */
+  position: absolute; /* 위치 고정 */
+
+}
+
+
+.direction-arrow2 {
+  z-index: 9999; /* 항상 최상위 레이어 */
+  position: absolute; /* 위치 고정 */
+
+}
+
+.mapboxgl-ctrl-top-left .directions-control {
+  margin: 10px;
+}
+
+.mapbox-directions-inputs button {
+  visibility: hidden;
+}
+
+.mapbox-directions-origin .mapbox-form-label {
+  visibility: hidden;
+}
+
+.mapbox-form-label .directions-icon {
+  visibility: hidden;
+}
+
+/* 추후 업데이트 예정 */
+.mapbox-directions-route-summary {
+  visibility: hidden;
+}
+
+.navigation-ui {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar {
+  background-color: rgb(35 55 75 / 90%);
+  color: #fff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 12px;
+  border-radius: 4px;
+}
+
+.reset-button {
+  position: absolute;
+  top: 50px;
+  z-index: 1;
+  left: 12px;
+  padding: 4px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}

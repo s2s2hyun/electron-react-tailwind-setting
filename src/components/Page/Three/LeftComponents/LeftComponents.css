@@ -1,0 +1,185 @@
+.left-center-circle-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-center-circle-wrap .left-center-circle-left {
+  width: calc((100% / 3) - 8px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-speed-top {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  /* border: 2px solid #fff; */
+  clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 0% 90%, 0% 0%);
+  background: conic-gradient(
+    from -140deg,
+    rgba(48, 154, 200, 0.5) 0deg,
+    rgba(48, 154, 200, 0.7) calc(var(--speed) * 1.4deg),
+    #030712 calc(var(--speed) * 1.1deg),
+    #030712 270deg
+  );
+}
+
+.circle-speed-middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  background: rgba(3, 7, 18, 1);
+  /* border: 2px solid #fff; */
+  clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 0% 90%, 0% 0%);
+}
+
+.circle-second-top {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 390px;
+  min-width: 390px;
+  height: 390px;
+  border-radius: 50%;
+  /* border: 2px solid #fff; */
+  clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 0% 90%, 0% 0%);
+  background: conic-gradient(
+    from -140deg,
+    rgba(48, 154, 200, 0.1) 0deg,
+    rgba(48, 154, 200, 0.04) calc(var(--speed) * 1deg),
+    /* 메인 색상 투명도 증가 */ rgba(48, 154, 200, 0.02)
+      calc(var(--speed) * 1.1deg),
+    /* 중간 단계 추가 */ rgba(48, 154, 200, 0.2) calc(var(--speed) * 1.4deg),
+    /* 끝부분 페이드아웃 */ #030712 calc(var(--speed) * 1.1deg),
+    /* 완전히 어두워지는 지점 */ #030712 270deg
+  );
+}
+
+.circle-second-middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: rgba(3, 7, 18, 1);
+  /* border: 2px solid #fff; */
+  clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 0% 90%, 0% 0%);
+}
+
+.circle-third-top {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  min-width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  /* border: 2px solid #fff; */
+  clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 0% 90%, 0% 0%);
+  background: conic-gradient(
+    from -140deg,
+    rgba(48, 154, 200, 0.5) 0deg,
+    rgba(48, 154, 200, 0.9) calc(var(--speed) * 1deg),
+    rgba(48, 154, 200, 0.9) calc(var(--speed) * 1.1deg),
+    rgba(48, 154, 200, 9) calc(var(--speed) * 1.4deg),
+    #030712 calc(var(--speed) * 1.1deg),
+    #030712 270deg
+  );
+}
+
+.circle-third-middle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(3, 7, 18, 1);
+  /* border: 2px solid #fff; */
+  clip-path: polygon(50% 0%, 100% 0%, 100% 90%, 0% 90%, 0% 0%);
+}
+
+.circle-speed-inner {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  /* justify-content: center; */
+  color: #fff;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #121619 0%, transparent 50%),
+    linear-gradient(180deg, #294c68 0%, transparent 50%),
+    linear-gradient(270deg, #161a22 0%, transparent 50%),
+    linear-gradient(360deg, #0c0e10 0%, transparent 50%);
+  border-left: 1px solid #3b6477;
+  border-top: 1px solid #3b6477;
+  border-right: 1px solid #3b6477;
+}
+
+.speed-value {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.speed-unit {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.speed-control {
+  position: absolute;
+  bottom: -60px;
+  display: flex;
+  gap: 20px;
+}
+
+.speed-control button {
+  background-color: #8b0000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.left-center-circle-center,
+.left-center-circle-right {
+  width: calc((100% / 3) - 8px);
+}
